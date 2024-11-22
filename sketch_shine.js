@@ -92,17 +92,21 @@ var numFrames = 300;
 var thisDensity = 1;
 
 function preload(){
+  // tFont[0] = loadFont("shine_resources/Milligram-Heavy.ttf");
   tFont[0] = loadFont("shine_resources/Milligram-Heavy.ttf");
   tFont[1] = loadFont("shine_resources/Inter-Medium.ttf");
   tFont[2] = loadFont("shine_resources/NeueWorld-CondensedRegular.ttf");
   tFont[3] = loadFont("shine_resources/EditorialNew-Regular.ttf");
   tFont[4] = loadFont("shine_resources/Heading-Now-56-Bold-Italic.otf");
+  // tFont[5] = loadFont("shine_resources/NotoSansSC-Black.otf");
+  tFont[5] = loadFont("resources/archive/NotoSansSC-Black.otf");
 
   tFontFactor[0] = 0.75;
   tFontFactor[1] = 0.75;
   tFontFactor[2] = 0.75; 
   tFontFactor[3] = 0.9; 
   tFontFactor[4] = 0.8; 
+  tFontFactor[5] = 1.2; 
 }
 
 function setup(){
@@ -264,6 +268,7 @@ function makeSpokes(){
       var start;
 
       var tAng = m * ang;
+      // 以 C 为 圆心 的极坐标系； m 是角度， n 是长度；
       var tX = cos(tAng) * (n * radStep) + c.x;
       var tY = sin(tAng) * (n * radStep) + c.y;
 
@@ -305,6 +310,7 @@ function makeSpokes(){
   }
 }
 
+// 看上去，是把字体变成 一个一个 可拉伸的点（线）的
 function makeDots(){
   pointCounter = 0;
   for(var m = 0; m < resLon; m++){
