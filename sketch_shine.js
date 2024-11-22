@@ -106,7 +106,7 @@ function preload(){
   tFontFactor[2] = 0.75; 
   tFontFactor[3] = 0.9; 
   tFontFactor[4] = 0.8; 
-  tFontFactor[5] = 1.2; 
+  tFontFactor[5] = 1.1; 
 }
 
 function setup(){
